@@ -11,6 +11,7 @@ public class Player {
         this.hp = hp;
         this.power = power;
         this.spellCards = spellCards;
+        //hi
     }
 }
 
