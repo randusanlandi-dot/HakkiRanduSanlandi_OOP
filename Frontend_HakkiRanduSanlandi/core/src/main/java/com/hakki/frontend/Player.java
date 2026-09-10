@@ -39,7 +39,9 @@ public class Player extends GameObject {
     public void shoot(Enemy target) {
         int damage = 10 + getPower();
         System.out.println(getName() + " shoots " + target.getName() + " dealing " + damage + " DMG!");
-        target.takeDamage(damage);
+        if (target.takeDamage(damage)) {
+            addScore(target.getScoreValue());
+        }
     }
 
     public void addScore(long points) {

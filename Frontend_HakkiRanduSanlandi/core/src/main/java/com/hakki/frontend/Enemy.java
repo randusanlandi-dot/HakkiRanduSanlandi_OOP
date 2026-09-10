@@ -13,7 +13,7 @@ public class Enemy extends GameObject {
         this.name = name;
         this.hp = hp;
         this.maxHp = hp;
-        this.scoreValue = 100;
+        this.scoreValue = 100L;
     }
     public Enemy(float x, float y, float width, float height, Color color, String name, int hp, long scoreValue) {
         super(x, y, width,height,0,color);

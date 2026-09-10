@@ -1,4 +1,4 @@
-package com.netlab.frontend;
+package com.hakki.frontend;
 
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
@@ -30,19 +30,22 @@ public class Main extends ApplicationAdapter {
         gameObjects = new ArrayList<>();
 
         // TODO 2: Instantiate Player (Red square) at (280, 40)
-        player = new Player(280, 40, "Reimu Hakurei", 100, 50, 3);
+        player = new Player(280, 40, "Reimu Hakurei", 100, 15, 3);
 
         // TODO 3: Instantiate Fairy (Pink square) at (150, 380)
-
+        fairy = new Fairy(150, 300, "Fairy", 100);
 
         // TODO 4: Instantiate Boss (Blue square) at (380, 400)
-
+        boss = new Boss(380, 400, "Cirno", 150);
 
         // TODO 5: Instantiate Items (White squares) with downward speeds
-
+        item = new Item(380, 450, 25, 25, 120, "Item Type", 1000L);
 
         // TODO 6: Add all entities into the gameObjects list polymorphically
-
+        gameObjects.add(player);
+        gameObjects.add(fairy);
+        gameObjects.add(boss);
+        gameObjects.add(item);
     }
 
     @Override
