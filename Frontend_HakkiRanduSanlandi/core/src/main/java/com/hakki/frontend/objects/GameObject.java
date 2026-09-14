@@ -1,9 +1,10 @@
-package com.hakki.frontend;
+package com.hakki.frontend.objects;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
+import com.badlogic.gdx.math.Rectangle;
 
 import java.awt.Color;
 
-public class GameObject {
+public abstract class GameObject implements Collidable {
     protected float x;
     protected float y;
     protected float width;
@@ -72,6 +73,21 @@ public class GameObject {
 
     public Color getColor() {
         return this.color;
+    }
+
+    @Override
+    public Rectangle getCoreHitbox() {
+        return new Rectangle(x, y, width, height);
+    }
+
+    @Override
+    public Rectangle getGrazeHitbox() {
+        return new Rectangle((x - 10), (y - 10), (width + 20), (height + 20) );
+    }
+
+    @Override
+    public void onCollision(Collidable other) {
+
     }
 
 }

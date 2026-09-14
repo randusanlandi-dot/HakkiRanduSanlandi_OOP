@@ -1,4 +1,7 @@
-package com.hakki.frontend;
+package com.hakki.frontend.objects.enemies;
+
+import com.hakki.frontend.objects.GameObject;
+import com.hakki.frontend.objects.Player;
 
 import java.awt.*;
 

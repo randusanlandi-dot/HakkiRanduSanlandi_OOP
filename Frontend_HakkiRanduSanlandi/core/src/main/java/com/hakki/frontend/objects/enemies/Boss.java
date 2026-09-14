@@ -1,4 +1,7 @@
-package com.hakki.frontend;
+package com.hakki.frontend.objects.enemies;
+import com.hakki.frontend.objects.Collidable;
+import com.hakki.frontend.objects.Player;
+
 import java.awt.*;
 
 public class Boss extends Enemy {
@@ -11,6 +14,7 @@ public class Boss extends Enemy {
         this.color = Color.BLUE;
         this.scoreValue = 5000L;
     }
+
     public Boss(float x, float y, String name, int hp) {
         super(name, hp);
         this.x = x;
@@ -19,5 +23,12 @@ public class Boss extends Enemy {
         this.height = 48;
         this.color = Color.BLUE;
         this.scoreValue = 5000L;
+    }
+
+    @Override
+    public void onCollision(Collidable other) {
+        if (other.getClass() == Player.class) {
+            System.out.print("Player touches boss");
+        }
     }
 }

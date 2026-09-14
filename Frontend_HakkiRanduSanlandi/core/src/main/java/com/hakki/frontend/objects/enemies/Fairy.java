@@ -1,5 +1,6 @@
-package com.hakki.frontend;
-import java.awt.*;
+package com.hakki.frontend.objects.enemies;
+import com.hakki.frontend.objects.Collidable;
+import com.hakki.frontend.objects.Player;
 
 public class Fairy extends Enemy {
     public Fairy(String name, int hp) {
@@ -15,4 +16,12 @@ public class Fairy extends Enemy {
         this.y = y;
         this.scoreValue = 500L;
     }
+
+    @Override
+    public void onCollision(Collidable other) {
+        if (other.getClass() == Player.class) {
+            System.out.print("Player touches fairy");
+        }
+    }
+
 }
