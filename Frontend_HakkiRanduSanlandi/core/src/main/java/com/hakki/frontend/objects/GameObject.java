@@ -1,8 +1,7 @@
 package com.hakki.frontend.objects;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.math.Rectangle;
-
-import java.awt.Color;
+import com.badlogic.gdx.graphics.Color;
 
 public abstract class GameObject implements Collidable {
     protected float x;
@@ -24,7 +23,10 @@ public abstract class GameObject implements Collidable {
     public void update(float delta) {
     }
     public void render(ShapeRenderer shapeRenderer) {
-
+        if (shapeRenderer != null && color != null) {
+            shapeRenderer.setColor(color);
+            shapeRenderer.rect(x, y, width, height);
+        }
     }
 
     public void setX(float x) {

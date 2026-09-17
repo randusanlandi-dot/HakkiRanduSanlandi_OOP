@@ -2,6 +2,7 @@ package com.hakki.frontend.objects.items;
 import com.hakki.frontend.objects.GameObject;
 import com.hakki.frontend.objects.Player;
 import com.hakki.frontend.objects.Collidable;
+import com.badlogic.gdx.graphics.Color;
 
 import java.awt.*;
 
@@ -60,6 +61,7 @@ public class Item extends GameObject {
     @Override
     public void onCollision(Collidable other) {
         if (other.getClass() == Player.class) {
+            System.out.println("your mom");
         }
         // TODO: Cek apakah other yang diterima method ini adalah Player
         // Item pickup is handled on the Player side via collectItem()

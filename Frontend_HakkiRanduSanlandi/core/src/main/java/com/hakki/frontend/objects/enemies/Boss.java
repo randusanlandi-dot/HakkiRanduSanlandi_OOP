@@ -1,6 +1,7 @@
 package com.hakki.frontend.objects.enemies;
 import com.hakki.frontend.objects.Collidable;
 import com.hakki.frontend.objects.Player;
+import com.badlogic.gdx.graphics.Color;
 
 import java.awt.*;
 
@@ -28,7 +29,7 @@ public class Boss extends Enemy {
     @Override
     public void onCollision(Collidable other) {
         if (other.getClass() == Player.class) {
-            System.out.print("Player touches boss");
+            System.out.println("Player touches boss");
         }
     }
 }

@@ -5,6 +5,7 @@ import com.hakki.frontend.objects.items.Item;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.hakki.frontend.objects.items.ItemType;
+import com.badlogic.gdx.graphics.Color;
 
 import java.awt.*;
 
@@ -16,7 +17,7 @@ public class Player extends GameObject {
     private long score;
 
     public Player(String name, int hp, int power, int spellCards) {
-        super(280, 40, 32,32, 0, Color.RED);
+        super(280, 40, 32,32, 100, Color.RED);
         this.name = name;
         this.hp = hp;
         this.power = power;
@@ -25,7 +26,7 @@ public class Player extends GameObject {
     }
 
     public Player(int x, int y, String name, int hp, int power, int spellCards) {
-        super(x, y, 32,32, 0, Color.RED);
+        super(x, y, 32,32, 100, Color.RED);
         this.name = name;
         this.hp = hp;
         this.power = power;
@@ -149,7 +150,7 @@ public class Player extends GameObject {
     @Override
     public void onCollision(Collidable other) {
         if (other.getClass() == Item.class) {
-            System.out.print("Player touches items");
+            System.out.println("Player touches items");
             collectItem((Item) other);
         }
     }

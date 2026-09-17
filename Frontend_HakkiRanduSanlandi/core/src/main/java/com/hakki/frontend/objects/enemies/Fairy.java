@@ -20,7 +20,7 @@ public class Fairy extends Enemy {
     @Override
     public void onCollision(Collidable other) {
         if (other.getClass() == Player.class) {
-            System.out.print("Player touches fairy");
+            System.out.println("Player touches fairy");
         }
     }
 

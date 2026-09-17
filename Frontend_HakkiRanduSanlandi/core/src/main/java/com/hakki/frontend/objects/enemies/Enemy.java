@@ -2,6 +2,7 @@ package com.hakki.frontend.objects.enemies;
 
 import com.hakki.frontend.objects.GameObject;
 import com.hakki.frontend.objects.Player;
+import com.badlogic.gdx.graphics.Color;
 
 import java.awt.*;
 
